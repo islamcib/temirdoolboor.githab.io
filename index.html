@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Темир Долбоорлор</title>
+    <link rel="stylesheet" href="./css/style.css    ">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./img/logo1.jpeg" alt="Логотип">
+                <span class="company-name">Темир Долбоорлор</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Добро пожаловать!</h2>
+            <p>Мы специализируемся на производстве и установке железных ворот высокого качества.</p>
+            <a href="#catalog" class="btn">Заказать сейчас</a>
+        </div>
+    </section>
+
+    <section id="catalog" class="catalog">
+        <div class="container">
+            <h2>Наша продукция</h2>
+            <div class="product">
+                <img src="gate1.jpg" alt="Ворота 1">
+                <h3>Железные ворота №1</h3>
+                <p>Описание продукта. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="btn btn-order">Заказать</a>
+            </div>
+            <div class="product">
+                <img src="gate2.jpg" alt="Ворота 2">
+                <h3>Железные ворота №2</h3>
+                <p>Описание продукта. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="btn btn-order">Заказать</a>
+            </div>
+            <!-- Добавьте еще продуктов по аналогии -->
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            <!-- Ваша информация для контактов здесь -->
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>О нас</h2>
+            <p>Биз жогорку сапаттагы темир дарбазаларды жана тосмолорду өндүрүү жана орнотуу боюнча адистешкен фирмабыз. Биздин тажрыйбалуу жана кесипкөй жамаат ар бир кардарга жекече мамиле жасап, биздин кызматтардын сапатынын жана ишенимдүүлүгүнүн жогорку деңгээлин кепилдейт.
+                Сиздин коопсуздугуңузга жана стилиңизге ылайыкташтырылган дарбазанын дизайнын жана конфигурациясын сунуштайбыз. Биздин максат-үйүңүздү же бизнесиңизди эстетикалык жана заманбап көрүнүш менен камсыз кылуу.Биз тармактын акыркы тенденцияларын жана инновацияларын ээрчип, өнүмдөрүбүздү жана кызматтарыбызды тынымсыз жакшыртууга умтулабыз. Биз менен сиздин канааттануу кепилденет!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <div class="logo">
+                    <img src="./img/logo1.jpeg" alt="Логотип">
+                    <span class="company-name">Темир Долбоорлор</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Главная</a>
+                    <a href="#catalog">Каталог</a>
+                    <a href="#about">О нас</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+            </div>
+            <div class="footer-social">
+                <!-- Добавьте иконки социальных сетей или другие ссылки -->
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var orderButtons = document.querySelectorAll('.btn-order');
+    orderButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            scrollToSection('catalog');
+        });
+    });
+
+    var contactsButton = document.getElementById('contacts-button');
+    contactsButton.addEventListener('click', function() {
+        scrollToSection('contacts');
+    });
+
+    var aboutButton = document.getElementById('about-button');
+    aboutButton.addEventListener('click', function() {
+        scrollToSection('about');
+    });
+});
+    </script>
+</body>
+</html>
